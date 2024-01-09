@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="three">
+        <h2>Users Management</h2>
+        <div class="first">
+            <fieldset class="abc">
+                <legend style="margin-left: 15px; padding-left: 5px; padding-right: 5px;">All Status</legend>
+                <select class="selectForStatus">
+                    <option value="0">All</option>
+                    <option value="true">Active</option>
+                    <option value="false">Inactive</option>
+                </select>
+            </fieldset>
+        </div>
+        <button class="sort">Sort Users</button>
+        <button class="remove">Remove Twin</button>
+        <div class="second">
+            <input class="name1" name="srch" type="text" placeholder="">
+            <span><img class="bca" src="./find.png" alt="Search"></span>
+        </div>
+    </div>
+    <button class="addNewUser">Create New User</button>
+
+    <!-- DIALOG FOR ADDING USER -->
+
+    <dialog class="modal">
+        <form class="form">
+            <input placeholder="Title..." type="text" name="title"><br><br>
+            <input class="aaaaa" placeholder="Email..." type="text" name="email"><br><br>
+            <input class="bbbb" type="submit" value="Add">
+        </form>
+        <button class="close">Close</button>
+    </dialog>
+
+
+    <!-- DIALOG FOR EDIT -->
+    <dialog class="dialogEdit">
+        <form class="form1">
+            <input type="text" name="title">
+            <input type="text" name="email">
+            <button type="submit">Edit</button>
+        </form>
+        <button class="closeEdit">Close</button>
+    </dialog>
+
+    <!--DEALOG FOR DELETE -->
+
+    <dialog class="deleteModal"><br>
+        <h2>Are you sure ?</h2><br>
+        <button class="yes">Yes</button>
+        <button class="no">No</button>
+    </dialog>
+
+    <dialog class="showInfo">
+        <div class="information"></div>
+        <button class="closeInfo">Close</button>
+    </dialog>
+
+    <table class="table">
+        <thead>
+            <tr class="one">
+                <th>id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Complited</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="box"></tbody>
+    </table>    
+    <script src="./main.js"></script>
+</body>
+
+</html>
+
+<!-- json-server --watch db.json -->
